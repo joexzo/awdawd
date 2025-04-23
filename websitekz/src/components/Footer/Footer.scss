@@ -1,0 +1,210 @@
+.footer {
+  padding: 4rem 0 2rem;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #000;
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 1rem;
+
+      a {
+        color: #666;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  &__social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #666;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      svg {
+        color: currentColor;
+      }
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copyright {
+    color: #666;
+    margin: 0;
+  }
+
+  &__legal {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
+
+.newsletter {
+  &__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+
+  &__form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: transparent;
+
+    &::placeholder {
+      color: #666;
+    }
+
+    &:focus {
+      border-color: #000;
+    }
+  }
+
+  &__button {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+    text-align: center;
+
+    &:hover {
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  &__disclaimer {
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0;
+    max-width: 400px;
+
+    a {
+      color: #000;
+      text-decoration: underline;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 2rem;
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    &__legal {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+
+  .newsletter {
+    &__form {
+      flex-direction: column;
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+} 
