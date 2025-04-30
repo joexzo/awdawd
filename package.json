@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "websitekz",
   "private": true,
   "version": "0.0.0",
@@ -15,11 +14,12 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
+    "framer-motion": "^12.7.4",
     "gsap": "^3.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.87.0",
-    "swiper": "^10.3.1"
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
@@ -33,11 +33,5 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^6.3.1"
-=======
-  "dependencies": {
-    "framer-motion": "^12.7.4",
-    "gsap": "^3.12.7",
-    "swiper": "^11.2.6"
->>>>>>> f519bc85a64441a48bbb5f6a00c9cd3978aa590f
   }
 }
