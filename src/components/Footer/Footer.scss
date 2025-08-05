@@ -11,9 +11,37 @@
   }
 
   &__logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    
+    &-img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #000;
+      line-height: 1;
+    }
+
+    &-subtitle {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #666;
+      line-height: 1;
+      margin-top: 2px;
+    }
   }
 
   &__title {
@@ -205,6 +233,236 @@
 
     &__button {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0 1.5rem;
+    
+    &__grid {
+      gap: 1.5rem;
+    }
+    
+    &__logo {
+      margin-bottom: 1.5rem;
+      
+      &-img {
+        height: 60px;
+      }
+      
+      &-title {
+        font-size: 1.1rem;
+      }
+      
+      &-subtitle {
+        font-size: 0.8rem;
+      }
+    }
+    
+    &__title {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    
+    &__links {
+      li {
+        margin-bottom: 0.75rem;
+        
+        a {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    
+    &__social {
+      li {
+        margin-bottom: 0.75rem;
+      }
+      
+      .social-link {
+        font-size: 0.9rem;
+        gap: 0.5rem;
+      }
+    }
+    
+    &__bottom {
+      padding-top: 1.5rem;
+      gap: 0.75rem;
+    }
+    
+    &__copyright {
+      font-size: 0.85rem;
+    }
+    
+    &__legal {
+      gap: 0.75rem;
+      
+      a {
+        font-size: 0.85rem;
+      }
+    }
+  }
+  
+  .newsletter {
+    &__text {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    &__form {
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    &__input {
+      padding: 0.625rem 0.875rem;
+      font-size: 0.9rem;
+    }
+    
+    &__button {
+      padding: 0.625rem 1.25rem;
+      font-size: 0.9rem;
+    }
+    
+    &__disclaimer {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding: 1.5rem 0 1rem;
+    
+    &__grid {
+      gap: 1.25rem;
+    }
+    
+    &__logo {
+      margin-bottom: 1.25rem;
+      
+      &-img {
+        height: 50px;
+      }
+      
+      &-title {
+        font-size: 1rem;
+      }
+      
+      &-subtitle {
+        font-size: 0.75rem;
+      }
+    }
+    
+    &__title {
+      font-size: 0.9rem;
+      margin-bottom: 0.875rem;
+    }
+    
+    &__links {
+      li {
+        margin-bottom: 0.625rem;
+        
+        a {
+          font-size: 0.85rem;
+        }
+      }
+    }
+    
+    &__social {
+      li {
+        margin-bottom: 0.625rem;
+      }
+      
+      .social-link {
+        font-size: 0.85rem;
+      }
+    }
+    
+    &__bottom {
+      padding-top: 1.25rem;
+    }
+    
+    &__copyright {
+      font-size: 0.8rem;
+    }
+    
+    &__legal {
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  
+  .newsletter {
+    &__text {
+      font-size: 0.85rem;
+    }
+    
+    &__input {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.85rem;
+    }
+    
+    &__button {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+    }
+    
+    &__disclaimer {
+      font-size: 0.65rem;
+    }
+  }
+}
+
+// Улучшения для планшетов
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    &__grid {
+      gap: 3rem;
+    }
+    
+    &__logo {
+      &-img {
+        height: 70px;
+      }
+    }
+  }
+}
+
+// Улучшения для ландшафтной ориентации на мобильных
+@media (max-width: 768px) and (orientation: landscape) {
+  .footer {
+    padding: 2rem 0 1.5rem;
+    
+    &__grid {
+      gap: 1.5rem;
+    }
+    
+    &__logo {
+      &-img {
+        height: 50px;
+      }
+    }
+  }
+}
+
+// Улучшения для устройств без поддержки hover
+@media (hover: none) {
+  .footer {
+    &__links a:hover,
+    &__social .social-link:hover,
+    &__legal a:hover {
+      color: #666;
+    }
+  }
+  
+  .newsletter {
+    &__button:hover {
+      background: transparent;
+      color: #000;
     }
   }
 } 
